@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BloodDonors.RegisterForm">
+
+  <StackLayout VerticalOptions="StartAndExpand">
+    <StackLayout BackgroundColor="#ec3554" Padding="20">
+      <Image Source="bloodDonors.jpg"  />
+    </StackLayout>
+    <Label Text="Name" />
+    <Entry x:Name="nameEntry" Text="{Binding Name}"/>
+    <Label Text="Mobile" />
+    <Entry x:Name="mobileEntry" Text="{Binding Mobile}"/>
+    <Label Text="Blood Type" />
+    <Entry x:Name="BloodTypeEntry" Text="{Binding BloodType}"/>
+
+    <Button Text="Save" Clicked="submitClicked"/>
+
+
+  </StackLayout>
+</ContentPage>

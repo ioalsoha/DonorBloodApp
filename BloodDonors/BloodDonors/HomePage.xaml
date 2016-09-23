@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BloodDonors.HomePage">
+
+  <StackLayout BackgroundColor="White">
+
+    <StackLayout BackgroundColor="#ec3554">
+      <Image Source="bloodDonors.jpg"  />
+    </StackLayout>
+    <Picker x:Name="pickerBlood" Title="Choose blood type" ></Picker>
+    <Frame Padding="2, 2, 2, 2" OutlineColor="#ec3554"  BackgroundColor="White" HorizontalOptions="FillAndExpand">
+      <SearchBar x:Name="sbSearch" Placeholder="Search" PlaceholderColor="#ec3554" TextColor="#ec3554"/>
+    </Frame>
+
+    <ListView x:Name="DonorView" Header="List of Donors" ItemSelected="listItemSelected" IsPullToRefreshEnabled="True">
+      <ListView.ItemTemplate>
+        <DataTemplate>
+          <ImageCell Text="{Binding Name}" Detail="{Binding BloodType}" TextColor="#ec3554" DetailColor="Black" ImageSource="BloodHp1.png" />
+        </DataTemplate>
+      </ListView.ItemTemplate>
+    </ListView>
+
+
+  </StackLayout>
+
+
+</ContentPage>
